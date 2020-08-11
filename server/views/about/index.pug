@@ -1,3 +1,26 @@
 extends ../layout/index
 block contenido
-    h1= pagina
+    main.container.mt-5 
+        .row
+            .col-md-5
+                img.img-fluid(src="img/nosotros.jpg", alt="imgnosotros")
+            .col-md-7
+                h1= pagina
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit pretium nunc, sit amet vehicula metus facilisis ut. Ut ut fermentum ligula, quis rhoncus sem. Quisque nec cursus nisi. 
+                p Aliquam vehicula suscipit luctus. In id lectus ultrices, dignissim justo in, aliquet ex. Suspendisse facilisis, justo nec accumsan imperdiet, mauris nulla rhoncus nibh, nec luctus diam eros ac est. Vivamus dapibus ligula quis urna scelerisque, at commodo lorem semper. Sed pretium leo sed neque congue faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                p Nullam commodo ultricies ante quis tristique. Donec posuere neque eu elit pharetra, quis vulputate turpis fermentum. Sed sem erat, dignissim ac velit quis, iaculis dignissim erat.
+    .listado-iconos
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img.img-fluid.mb-4(src="img/icono_seguridad.svg")
+                    h2.mb-4 Seguridad
+                    p Fusce rhoncus, ligula nec tincidunt rhoncus, turpis ex lobortis magna, et ultrices odio sem eget augue.
+                .col-md-4
+                    img.img-fluid.mb-4(src="img/icono_destinos.svg")
+                    h2.mb-4 Mejores Destinos
+                    p Fusce rhoncus, ligula nec tincidunt rhoncus, turpis ex lobortis magna, et ultrices odio sem eget augue.
+                .col-md-4
+                    img.img-fluid.mb-4(src="img/icono_precios.svg")
+                    h2.mb-4 Mejor precio
+                    p Fusce rhoncus, ligula nec tincidunt rhoncus, turpis ex lobortis magna, et ultrices odio sem eget augue.

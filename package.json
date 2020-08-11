@@ -1,11 +1,10 @@
 {
   "name": "travelagencie",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index",
+    "killport": "killall -9 node"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +12,18 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.1",
     "express": "^4.17.1",
+    "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",
-    "pug": "^3.0.0"
-  }
+    "pug": "^3.0.0",
+    "sequelize": "^6.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nairalucila/travelagency.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nairalucila/travelagency/issues"
+  },
+  "homepage": "https://github.com/nairalucila/travelagency#readme",
+  "description": ""
 }

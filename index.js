@@ -2,6 +2,11 @@ const express = require('express');
 const routes = require('./server/routes/index');
 const path = require('path');
 const configs = require('./server/config');
+const db = require('./server/config/database');
+
+db.authenticate()
+     .then(()=> console.log('db conectadaaaa'))
+     .catch((err)=> console.log('ERROR -->', err));
 
 //config. express
 const app = express();
