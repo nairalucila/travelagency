@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = require('./server/routes/index');
 const path = require('path');
+const bodyParser = require('body-parser');
 const configs = require('./server/config');
 const db = require('./server/config/database');
 
@@ -26,6 +27,9 @@ app.use((req, res, next)=>{
      return next();
 
 });
+
+//cargar bodyparser
+app.use(bodyParser.urlencoded({extended: true}))
 
 //import routes
 app.use('/', routes());
