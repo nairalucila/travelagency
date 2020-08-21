@@ -20,6 +20,11 @@ h3 {
     font-size: 3rem;
 }
 
+.img-fluid{
+    max-width: 70%;
+    margin: 2rem;
+}
+
 .btn-success {
     background-color: #DC135F;
     border-color: #DC135F;

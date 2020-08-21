@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index",
+    "dev": "nodemon index",
+    "start": "node index",
     "killport": "killall -9 node"
   },
   "author": "",
@@ -25,5 +26,8 @@
     "url": "https://github.com/nairalucila/travelagency/issues"
   },
   "homepage": "https://github.com/nairalucila/travelagency#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
 }

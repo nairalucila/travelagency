@@ -1,8 +1,10 @@
 const Sequelize = require('sequelize');
-module.exports = new Sequelize('dbback', 'root', 'naira123', 
+require("dotenv").config({path: 'variables.env' })
+
+module.exports = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS, 
 {
-    host: 'localhost',
-    port: '3306',
+    host: process.env.BD_HOST,
+    port: process.env.BD_PORT,
     dialect: 'mysql',
     define: {
         timestamps: false

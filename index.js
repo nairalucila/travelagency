@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const configs = require('./server/config');
 const db = require('./server/config/database');
+require("dotenv").config({path: 'variables.env' })
 
 db.authenticate()
      .then(()=> console.log('db conectadaaaa'))
@@ -24,6 +25,7 @@ app.use(express.static('public'));
 app.use((req, res, next)=>{
      const fecha = new Date();
      res.locals.fechaActual = fecha.getFullYear();
+     res.locals.ruta = req.path;
      return next();
 
 });
@@ -42,4 +44,8 @@ const config = configs[app.get('env')];
 app.locals.titulo = config.nomb; //toma el nombre del objeto que esta en config>index
 
 //node index y wualá
-app.listen(3000, () => console.log('Servidor iniciado'));
+
+//puerto y host para app
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
+app.listen(port, host, ()=>{ console.log('Servidor iniciado')});
